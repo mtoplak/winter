@@ -23,6 +23,7 @@ public class MeasurementHistoryController {
 	@Value("${history.dayslimit}")
 	private int envHistoryDayslimit;
 
+	// koliko je bilo meritev v zadnjih 10 dneh
 	@GetMapping("/history")
 	public @ResponseBody Iterable<si.um.feri.measurements.dto.Measurement> getHistory() {
 		long history = System.currentTimeMillis() - envHistoryDayslimit * 3_600_000 * 24;

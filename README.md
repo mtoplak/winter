@@ -1,1 +1,1 @@
-# winter
+# Winter school
