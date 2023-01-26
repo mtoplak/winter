@@ -21,6 +21,6 @@ public class TestSample {
                 0,"mleko",25.0,-12.5, "mlecni izdelki"
         ));
         assertEquals(p.getCategory(),"mlecni izdelki");
-        assertTrue()
+        assertTrue(p.getMaxMeasure()>p.getMinMeasure());
     }
 }
