@@ -19,7 +19,7 @@ const Products = () => {
   };
   useEffect(() => {
     fetchData();
-  }, []);
+  });
 
   return (
     <div style={{ padding: "25px" }}>
