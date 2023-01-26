@@ -33,6 +33,11 @@ jobs:
     - name: Run tests
       run: mvn -B test
       working-directory: measurements_backend
+    - name: Build and analyze
+          env:
+            SONAR_TOKEN: 986038ccef686ec8f6953d535f48e98a5f9d8c82
+          run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=mtoplak_winter-school
+          working-directory: measurements_backend
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     - name: Update dependency graph
