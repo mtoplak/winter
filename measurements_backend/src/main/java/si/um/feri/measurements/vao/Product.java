@@ -13,12 +13,14 @@ public class Product {
 		setName(dto.name());
 		setMaxMeasure(dto.maxMeasure());
 		setMinMeasure(dto.minMeasure());
+		setCategory(dto.category());
 	}
 	
 	public void updateFrom(si.um.feri.measurements.dto.Product dto) {
 		setName(dto.name());
 		setMaxMeasure(dto.maxMeasure());
 		setMinMeasure(dto.minMeasure());
+		setCategory(dto.category());
 	}
 	
 	public si.um.feri.measurements.dto.Product toDto() {

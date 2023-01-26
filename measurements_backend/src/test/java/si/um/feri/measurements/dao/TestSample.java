@@ -6,6 +6,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import si.um.feri.measurements.vao.Product;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @SpringBootTest
 public class TestSample {
@@ -15,12 +16,11 @@ public class TestSample {
     Product product;
 
     @Test
-    void checkCategory() {
+    void preveriMlecneIzdelke() {
         Product p = new Product(new si.um.feri.measurements.dto.Product(
                 0,"mleko",25.0,-12.5, "mlecni izdelki"
         ));
-        assertEquals(1,dao.count());
-        dao.deleteById(product.getId());
-        assertEquals(0,dao.count());
+        assertEquals(p.getCategory(),"mlecni izdelki");
+        assertTrue()
     }
 }
